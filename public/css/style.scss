@@ -1,0 +1,886 @@
+// vars
+
+//  Primary
+
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// Neutral
+
+$Cool-gray: hsl(231, 11%, 63%);
+$Light-gray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100%);
+
+// global
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  user-select: none;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}
+
+// desktop
+
+.con {
+
+  background-color: $Magnolia;
+  width: 100%;
+  height: 100vh;
+  padding-top: 10vh;
+
+  .card {
+
+    background-color: $White;
+    width: 85%;
+    height: 570px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 15px;
+    border: none;
+    box-shadow: 3px 3px 9px rgba($Cool-gray, 0.2);
+
+    .side {
+
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      width: fit-content;
+      position: relative;
+
+      img {
+
+        height: 540px;
+
+      }
+
+
+      .steps {
+
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        color: $White;
+        padding: 0px 25px;
+        width: 100%;
+
+        .step {
+
+          padding: 15px 0px;
+
+          .num {
+
+            span {
+
+              border: 1px solid $White;
+              margin-top: 5px;
+              width: 40px;
+              height: 40px;
+              font-size: 16px;
+              font-weight: 700;
+              display: block;
+              border-radius: 30px;
+              text-align: center;
+              padding: 7px 0px;
+
+            }
+
+            .selected {
+
+              background-color: $Light-blue;
+              color: $Marine-blue;
+              border: none;
+
+            }
+
+          }
+
+          .text {
+
+            span {
+
+              display: block;
+
+            }
+
+            .light {
+
+              font-weight: 400;
+              color: $Light-gray;
+
+            }
+
+            .bold {
+
+              font-weight: 700;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .content {
+
+      padding: 30px;
+
+      .steps {
+
+        height: 450px;
+
+        .Step {
+
+          h1 {
+            font-weight: 700;
+            color: $Marine-blue;
+          }
+
+          p {
+            font-weight: 400;
+            color: $Cool-gray;
+          }
+
+        }
+
+      }
+
+      .options {
+
+        span {
+
+          padding: 10px 30px;
+          border-radius: 5px;
+          font-weight: 500;
+          cursor: pointer;
+
+        }
+
+        .next {
+
+          background-color: $Marine-blue;
+          color: $White;
+
+        }
+
+        .next:hover {
+
+          background-color: hsl(213, 96%, 27%);
+
+        }
+
+        .confirm {
+
+          background-color: $Purplish-blue;
+          color: $White;
+
+        }
+
+        .confirm:hover {
+
+          background-color: $Pastel-blue;
+
+        }
+
+        .prev {
+
+          color: $Cool-gray;
+          padding: 10px 0px;
+
+        }
+
+        .prev:hover {
+
+          color: $Marine-blue;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// mobile
+
+.container-fluid.mob-con {
+
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  height: 100vh;
+
+  .con-mob {
+    background-color: $Magnolia;
+    min-height: 90vh;
+  }
+
+  .side {
+
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    position: relative;
+    height: fit-content;
+
+    img {
+      width: 100%;
+    }
+
+    .steps {
+
+      position: absolute;
+      top: 0px;
+      color: $White;
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
+
+      .step {
+
+        padding: 15px 0px;
+
+          span {
+
+            border: 1px solid $White;
+            margin-top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: 700;
+            display: block;
+            border-radius: 30px;
+            padding: 7px 14px;
+            margin: 5px auto;
+
+          }
+
+          .selected {
+
+            background-color: $Light-blue;
+            color: $Marine-blue;
+            border: none;
+
+          }
+
+      }
+
+    }
+
+  }
+
+  .card {
+
+    background-color: $White;
+    width: 80vw;
+    height: fit-content;
+    margin: 0px auto;
+    border-radius: 20px;
+    padding: 0px;
+    border: none;
+    box-shadow: 3px 3px 9px rgba($Cool-gray, 0.2);
+    position: absolute;
+    top:  12vh;
+    left: 10vw;
+
+    .content {
+
+      padding: 40px 0px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+
+      .steps {
+
+        height: fit-content;
+
+        .Step {
+
+          h1 {
+            font-weight: 700;
+            color: $Marine-blue;
+          }
+
+          p {
+            font-weight: 400;
+            color: $Cool-gray;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  > .row {
+    margin-top: 0rem !important;
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+  }
+
+  .options {
+
+    background-color: $White;
+    padding: 2vh;
+    height: 10vh;
+
+    span {
+
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+
+    }
+
+    .next {
+
+      background-color: $Marine-blue;
+      color: $White;
+
+    }
+
+    .next:hover {
+
+      background-color: hsl(213, 96%, 27%);
+
+    }
+
+    .confirm {
+
+      background-color: $Purplish-blue;
+      color: $White;
+
+    }
+
+    .confirm:hover {
+
+      background-color: $Pastel-blue;
+
+    }
+
+    .prev {
+
+      color: $Cool-gray;
+      padding: 10px 0px;
+
+    }
+
+    .prev:hover {
+
+      color: $Marine-blue;
+
+    }
+
+  }
+
+}
+
+// step 1
+
+.step1 {
+
+  form {
+
+    padding-top: 20px;
+
+    label {
+      color: $Marine-blue;
+      padding: 10px 0px;
+      width: 100%;
+
+      .errText {
+        color: $Strawberry-red;
+        font-size: 14px;
+        padding: 5px;
+        font-weight: 500;
+        display: inline-block;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $Light-gray;
+      border-radius: 5px;
+      color: $Marine-blue;
+      outline: none;
+      font-weight: 500;
+    }
+
+    .err {
+      border: 1px solid $Strawberry-red;
+    }
+
+    input:hover {
+
+      border: 1px solid $Purplish-blue;
+
+    }
+
+  }
+
+}
+
+.step2 {
+
+  > .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .plans {
+
+    > .row {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 0px;
+      padding-left: 1vw;
+      margin-top: 5px;
+      height: fit-content;
+    }
+
+    .selected {
+
+      border: 1px solid $Purplish-blue !important;
+      background-color: $Magnolia;
+
+    }
+
+    .plan {
+
+      border: 1px solid $Light-gray;
+      padding: 20px;
+      border-radius: 15px;
+      padding-bottom: 0px;
+      cursor: pointer;
+
+      .text {
+
+        margin-top: 60px;
+        padding: 0px;
+        padding-left: 5px;
+
+        h6 {
+          color: $Marine-blue;
+          font-weight: 700;
+          padding: 0px;
+        }
+
+        p {
+
+          span {
+            font-weight: 500;
+          }
+
+          .colored {
+            font-weight: 400;
+            color: $Marine-blue;
+            font-size: 12px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .m_y {
+
+    text-align: center;
+    background-color: $Magnolia;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+
+    .colored {
+      color: $Marine-blue;
+    }
+
+    span {
+      color: $Cool-gray;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .slide {
+      background-color: $Marine-blue;
+      width: 40px;
+      height: 20px;
+      border-radius: 20px;
+      margin: 0px 15px;
+
+      span {
+        width: 15px;
+        height: 15px;
+        background-color: $White;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .left {
+        left: -10px;
+      }
+
+      .right {
+        left: 10px;
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 925px) {
+
+  .step2 {
+    .plans {
+      .plan {
+        padding: 10px 5px !important;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  .step2 {
+
+    .plans > .row {
+      margin-left: 10px;
+    }
+
+    .plan {
+
+      padding: 5px !important;
+
+      .pic {
+
+        margin-top: 10px;
+
+      }
+
+      .text {
+        margin-top: 0px !important;
+
+        p {
+          margin-bottom: 0px;
+        }
+
+      }
+    }
+  }
+
+}
+
+.step3 {
+
+  .ons {
+
+    .on {
+      border: 1px solid $Cool-gray;
+      margin: 10px -5px;
+      margin-right: 5px;
+      border-radius: 10px;
+      padding: 20px 0px;
+      cursor: pointer;
+
+      .pr {
+        padding-left: 0px;
+        padding-right: 7px;
+      }
+
+      div {
+
+        .box {
+          border: 1px solid $Cool-gray;
+          width: fit-content;
+          padding: 5px;
+          height: 17px;
+          width: 17px;
+          margin-top: 15px;
+          border-radius: 3px;
+          margin-left: 30%;
+          display: block;
+          img {
+            margin-top: -17px;
+            margin-left: -2px;
+          }
+        }
+
+        .checked {
+          background-color: $Purplish-blue;
+          border: none;
+        }
+
+        span {
+          display: block;
+          color: $Cool-gray;
+        }
+
+        .colored {
+          color: $Marine-blue;
+          font-weight: 700;
+        }
+
+        .price {
+          color: $Purplish-blue;
+          font-weight: 400;
+          margin-top: 10px;
+          font-size: 13px;
+        }
+
+      }
+
+    }
+
+    .selected {
+      border: 1px solid $Purplish-blue;
+      background: $Magnolia;
+    }
+
+    .on:hover {
+      border: 1px solid $Purplish-blue;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 767.9px)  {
+  .step3{
+
+    .ons > * {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+    .ons{
+      .on{
+        margin-right: -4px;
+        margin-left: -1px;
+        .pr{
+          padding-right: 0px;
+        }
+        .col-2{
+          width: 16%;
+        }
+        div{
+          .colored{
+            font-size: 16px;
+          }
+          span{
+            font-size: 14px;
+          }
+          .price{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.step4 {
+
+  > .row {
+    margin-left: calc(0.50 * var(--bs-gutter-x));
+  }
+
+  .row {
+
+    .data, .total {
+      border-radius: 10px;
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+
+    .data {
+
+      background-color: $Magnolia;
+
+      .hr{
+        border-bottom: 1px solid $Light-gray;
+        margin-left: 15px;
+        width: 89%;
+      }
+
+      .plan, .on {
+        padding: 20px 15PX;
+
+        span {
+          color: $Cool-gray;
+          font-size: 14px;
+        }
+
+        .colored {
+          color: $Marine-blue;
+        }
+
+      }
+
+      .on {
+        padding-bottom: 0px;
+
+        .colored {
+          font-weight: 400;
+        }
+
+      }
+
+      .plan {
+
+        .colored {
+          font-weight: 700;
+          font-size: 16px;
+        }
+
+        .change {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .change:hover {
+          color: $Purplish-blue;
+        }
+
+      }
+
+    }
+
+    .total {
+      padding: 30px 10px;
+
+      span {
+        color: $Cool-gray;
+        font-size: 14px;
+      }
+
+      .colored {
+        color: $Purplish-blue;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 767.9px)  {
+  .step4{
+
+    .data {
+
+      padding: 10px 0px !important;
+      padding-left: 10px !important;
+
+      .hr{
+        margin-left: 15px;
+        width: 89%;
+      }
+
+      .row > * {
+        padding: 0px;
+      }
+
+      .plan, .on {
+        padding: 10px 0PX !important;
+        padding-left: 15px !important;
+
+        span {
+          font-size: 12px !important;
+        }
+
+        .price {
+          span{
+            margin-top: 6px;
+          }
+        }
+
+
+      }
+
+      .plan {
+
+        .colored {
+          font-size: 14px !important;
+        }
+
+      }
+
+    }
+
+    .total {
+      padding: 30px 0px !important;
+
+      > .row {
+        margin-left: calc(0 * var(--bs-gutter-x));
+      }
+
+      .row > * {
+        padding: 0px;
+      }
+
+      span {
+        font-size: 12px !important;
+      }
+
+      .colored {
+        font-size: 16px !important;
+      }
+
+    }
+
+  }
+}
+
+.thanks {
+
+  text-align: center;
+
+  div {
+    padding: 30px;
+    margin-top: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 767.9px)  {
+
+  .thanks {
+
+    padding-bottom: 30px;
+
+    div {
+      padding: 30px;
+      margin-top: 0px;
+    }
+
+  }
+
+
+}
