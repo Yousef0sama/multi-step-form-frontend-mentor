@@ -346,7 +346,7 @@ export default function Home() {
   const checkPhone = () => {
 
     const numRegex = /^[+0-9\s]{1,}$/;
-    const phoneRegex = /^\+[0-9]{1,4}\s[0-9]{1,}$/;
+    const phoneRegex = /^\+[0-9]{5,}$/;
 
     if (form.phone.value.length == 0) {
 
@@ -364,7 +364,7 @@ export default function Home() {
 
     if (!phoneRegex.test(form.phone.value)) {
 
-      setForm({...form, phone : {...form.phone, err: "Please follow this pattern +xx xxxxx", class: "err"}});
+      setForm({...form, phone : {...form.phone, err: "Please follow this pattern +xxxxxxx", class: "err"}});
       return false;
 
     }
